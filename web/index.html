@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Билет 33 — Город</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Меню</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Билет 33</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Альбомы <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Город (2014)</a></li>
+                        <li><a href="#">О разном (2013)</a></li>
+                        <li class="divider"></li>
+                        <!--<li class="dropdown-header">Nav header</li>-->
+                        <li><a href="#">Другое</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Клипы <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Новый год</a></li>
+                        <li><a href="#">О зиме</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about">О проекте</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="/files/audio/o_raznom/ogg/front.jpg" alt="О разном">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">О разном <span class="text-muted">(2013)</span></h2>
+            <p class="lead">Первый альбом проекта Билет 33. В нём собраны композиции на различную тематику. Тем не менее удалось объединить их в цельное альбомище.</p>
+
+            <p>Альбом вышел 31 марта 2013 года.</p>
+
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+
+            <audio preload></audio>
+            <ol>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/01.mp3">01</a></li>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/02.mp3">02</a></li>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/03.mp3">03</a></li>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/04.mp3">04</a></li>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/05.mp3">05</a></li>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/06.mp3">06</a></li>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/07.mp3">07</a></li>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/08.mp3">08</a></li>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/09.mp3">09</a></li>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/10.mp3">10</a></li>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/11.mp3">11</a></li>
+                <li><a href="#" data-src="/files/audio/o_raznom/mp3/12.mp3">12</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Audio JS -->
+<script src="/js/audiojs/audio.min.js"></script>
+
+<script>
+    $(function() {
+        // Setup the player to autoplay the next track
+        var a = audiojs.createAll({
+            trackEnded: function() {
+                var next = $('ol li.playing').next();
+                if (!next.length) next = $('ol li').first();
+                next.addClass('playing').siblings().removeClass('playing');
+                audio.load($('a', next).attr('data-src'));
+                audio.play();
+            }
+        });
+
+        // Load in the first track
+        var audio = a[0];
+        first = $('ol a').attr('data-src');
+        $('ol li').first().addClass('playing');
+        audio.load(first);
+
+        // Load in a track on click
+        $('ol li').click(function(e) {
+            e.preventDefault();
+            $(this).addClass('playing').siblings().removeClass('playing');
+            audio.load($('a', this).attr('data-src'));
+            audio.play();
+        });
+        // Keyboard shortcuts
+        $(document).keydown(function(e) {
+            var unicode = e.charCode ? e.charCode : e.keyCode;
+            // right arrow
+            if (unicode == 39) {
+                var next = $('li.playing').next();
+                if (!next.length) next = $('ol li').first();
+                next.click();
+                // back arrow
+            } else if (unicode == 37) {
+                var prev = $('li.playing').prev();
+                if (!prev.length) prev = $('ol li').last();
+                prev.click();
+                // spacebar
+            } else if (unicode == 32) {
+                audio.playPause();
+            }
+        })
+    });
+</script>
+</body>
+</html>
