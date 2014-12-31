@@ -1,0 +1,27 @@
+<div class="row featurette {% if not full %}album-list-item{% endif %}"
+     {% if not full %}onclick="window.location.href='{{ path('bilet33_site_album', {'id': album.id, 'slug': album.slug}) }}'" {% endif %}>
+    <div class="col-md-5">
+        <img class="featurette-image img-responsive" src="{{ asset(album.coverFile) }}" alt="{{ album.title|e }}">
+        {% if full and album.backFile %}
+            <p>&nbsp;</p>
+            <img class="featurette-image img-responsive" src="{{ asset(album.backFile) }}" alt="{{ album.title|e }}">
+        {% endif %}
+    </div>
+    <div class="col-md-7">
+        <h2 class="featurette-heading">{{ album.title|e }} <span class="text-muted">({{ album.year|e }})</span></h2>
+        <p class="lead">{{ album.shortDescription|e }}</p>
+        {% if full %}
+            <audio preload></audio>
+            <ol class="audio-list">
+                {% for audio in album.audios %}
+                    <li><a href="#" data-src="{{ asset(audio.file) }}">{{ audio.title|e }}</a></li>
+                {% endfor %}
+            </ol>
+
+            {{ album.description|raw }}
+        {% else %}
+            <p><a class="btn btn-primary" href="{{ path('bilet33_site_album', {'id': album.id, 'slug': album.slug}) }}" role="button">Подробнее &raquo;</a></p>
+        {% endif %}
+    </div>
+</div>
+<hr class="featurette-divider">

@@ -1,0 +1,15 @@
+bilet33_site_homepage:
+    path:     /
+    defaults: { _controller: Bilet33SiteBundle:Default:index }
+
+bilet33_site_albums:
+    path:     /albums
+    defaults: { _controller: Bilet33SiteBundle:Album:index }
+
+bilet33_site_album:
+    path:     /album/{id}/{slug}
+    defaults: { _controller: Bilet33SiteBundle:Album:show, slug: '' }
+
+bilet33_site_about:
+    path:     /about
+    defaults: { _controller: Bilet33SiteBundle:Page:about }

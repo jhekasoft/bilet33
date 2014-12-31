@@ -1,0 +1,43 @@
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Меню</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ path('bilet33_site_homepage') }}">Билет 33</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="{{ path('bilet33_site_albums') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Альбомы <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        {% for album in albums %}
+                            <li><a href="{{ path('bilet33_site_album', {'id': album.id, 'slug': album.slug}) }}">{{ album.title|e }} ({{ album.year|e }})</a></li>
+                        {% endfor %}
+
+                        <li class="divider"></li>
+                        <!--<li class="dropdown-header">Nav header</li>-->
+                        <li><a href="#">Другое</a></li>
+
+                        <li class="divider"></li>
+                        <li><a href="{{ path('bilet33_site_albums') }}">Все</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Клипы <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Новый год</a></li>
+                        <li><a href="#">О зиме</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ path('bilet33_site_about') }}">О проекте</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
