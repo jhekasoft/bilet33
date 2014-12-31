@@ -2,6 +2,9 @@
 
 {% block content %}
     {% include 'Bilet33SiteBundle:Album:Include/album.html.twig' with {'album': album, 'full': true} %}
+
+    <p>&nbsp;</p>
+    <p><a class="btn btn-primary" href="{{ path('bilet33_site_albums') }}" role="button">&laquo; Все альбомы</a></p>
 {% endblock %}
 
 {% block javascripts %}

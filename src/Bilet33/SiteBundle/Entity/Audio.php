@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Audio
  *
- * @ORM\Table()
+ * @ORM\Table(name="audio")
  * @ORM\Entity(repositoryClass="Bilet33\SiteBundle\Entity\AudioRepository")
  */
 class Audio
@@ -24,7 +24,7 @@ class Audio
     /**
      * @var integer
      *
-     * @ORM\Column(name="album_id", type="integer")
+     * @ORM\Column(name="album_id", type="integer", nullable=true)
      */
     private $albumId;
 

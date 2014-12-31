@@ -3,5 +3,6 @@
 {% block content %}
     {% for album in albums %}
         {% include 'Bilet33SiteBundle:Album:Include/album.html.twig' with {'full': false} %}
+        {% if not loop.last %}<hr class="featurette-divider">{% endif %}
     {% endfor %}
 {% endblock %}

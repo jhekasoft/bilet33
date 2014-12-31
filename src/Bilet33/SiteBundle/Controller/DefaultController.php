@@ -19,7 +19,7 @@ class DefaultController extends Controller
         ]);
     }
 
-    public function mainMenuAction(Request $request)
+    public function mainMenuAction()
     {
         $repository = $this->getDoctrine()
             ->getRepository('Bilet33SiteBundle:Album');
@@ -28,6 +28,18 @@ class DefaultController extends Controller
 
         return $this->render('Bilet33SiteBundle:Default:mainMenu.html.twig', [
             'albums' => $albums,
+        ]);
+    }
+
+    public function footerAction()
+    {
+        $nowDatetime = new \DateTime('NOW');
+
+        $startYear = '2013';
+        $endYear = $nowDatetime->format('Y');
+        return $this->render('Bilet33SiteBundle:Default:footer.html.twig', [
+            'startYear' => $startYear,
+            'endYear' => $endYear,
         ]);
     }
 }

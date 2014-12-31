@@ -9,10 +9,8 @@ class AlbumController extends Controller
 {
     public function indexAction()
     {
-        $repository = $this->getDoctrine()
-            ->getRepository('Bilet33SiteBundle:Album');
-
-        $albums = $repository->findBy([], ['weight' => 'DESC']);
+        $albums = $this->getAlbumRepository()->findBy([], ['weight' => 'DESC']);
+        $albums[] = $this->getAlbumRepository()->getOtherAlbum();
 
         return $this->render('Bilet33SiteBundle:Album:index.html.twig', [
             'albums' => $albums,
@@ -21,10 +19,7 @@ class AlbumController extends Controller
 
     public function showAction($id, Request $request)
     {
-        $repository = $this->getDoctrine()
-            ->getRepository('Bilet33SiteBundle:Album');
-
-        $album = $repository->find($id);
+        $album = $this->getAlbumRepository()->find($id);
 
         # Redirect to the URL with slug
         $slug = $request->get('slug', null);
@@ -38,5 +33,19 @@ class AlbumController extends Controller
         return $this->render('Bilet33SiteBundle:Album:show.html.twig', [
             'album' => $album,
         ]);
+    }
+
+    public function otherAction()
+    {
+        $album = $this->getAlbumRepository()->getOtherAlbum();
+
+        return $this->render('Bilet33SiteBundle:Album:other.html.twig', [
+            'album' => $album,
+        ]);
+    }
+
+    protected function getAlbumRepository()
+    {
+        return $this->getDoctrine()->getRepository('Bilet33SiteBundle:Album');
     }
 }

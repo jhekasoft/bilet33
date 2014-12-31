@@ -3,9 +3,23 @@
 {% block content %}
     {% include 'Bilet33SiteBundle:Album:Include/album.html.twig' with {'album': mainAlbum, 'full': true} %}
 
+    <p>&nbsp;</p>
+
     <div class="jumbotron">
         <h1>Билет 33</h1>
-        <p>Это крутой проект.</p>
+        <p>
+            Поздно ночью выехать с города<br>
+            Чтобы утром приехать в другой.<br>
+            Пусть  билет этот стоит так дорого.<br>
+            Пусть встречает город чужой.
+        </p>
+
+        <p>
+            Рано утром будет так холодно.<br>
+            И вокзал, кафе, кофе, еда<br>
+            Будут греть тебя, прогулка по городу.<br>
+            Вот, и здесь началась суета...
+        </p>
         <p>
             <a class="btn btn-lg btn-primary" href="{{ path('bilet33_site_about') }}" role="button">Подробнее &raquo;</a>
         </p>

@@ -3,6 +3,7 @@
 namespace Bilet33\SiteBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
+use Bilet33\SiteBundle\Entity\Album;
 
 /**
  * AlbumRepository
@@ -12,4 +13,22 @@ use Doctrine\ORM\EntityRepository;
  */
 class AlbumRepository extends EntityRepository
 {
+    public function getOtherAlbum()
+    {
+        $audioRepository = $this
+            ->getEntityManager()
+            ->getRepository('Bilet33SiteBundle:Audio');
+
+        $album = new Album();
+        $album->setTitle('Другое');
+        $album->setShortDescription('Другие записи');
+
+        $audios = $audioRepository->findBy(['albumId' => null], ['number' => 'DESC']);
+
+        foreach ($audios as $audio) {
+            $album->addAudio($audio);
+        }
+
+        return $album;
+    }
 }

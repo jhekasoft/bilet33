@@ -1,14 +1,26 @@
+{% if album.id %}
+    {% set albumUrl = path('bilet33_site_album', {'id': album.id, 'slug': album.slug}) %}
+{% else %}
+    {% set albumUrl = path('bilet33_site_album_other') %}
+{% endif %}
+
 <div class="row featurette {% if not full %}album-list-item{% endif %}"
-     {% if not full %}onclick="window.location.href='{{ path('bilet33_site_album', {'id': album.id, 'slug': album.slug}) }}'" {% endif %}>
+     {% if not full %}onclick="window.location.href='{{ albumUrl }}'" {% endif %}>
     <div class="col-md-5">
-        <img class="featurette-image img-responsive" src="{{ asset(album.coverFile) }}" alt="{{ album.title|e }}">
+        {% if album.coverFile %}
+            <img class="featurette-image img-responsive" src="{{ asset(album.coverFile) }}" alt="{{ album.title|e }}">
+        {% else %}
+            <img class="featurette-image img-responsive" src="{{ asset('images/default_cover.jpg') }}" alt="{{ album.title|e }}">
+        {% endif %}
         {% if full and album.backFile %}
             <p>&nbsp;</p>
             <img class="featurette-image img-responsive" src="{{ asset(album.backFile) }}" alt="{{ album.title|e }}">
         {% endif %}
     </div>
     <div class="col-md-7">
-        <h2 class="featurette-heading">{{ album.title|e }} <span class="text-muted">({{ album.year|e }})</span></h2>
+        <h2 class="featurette-heading">{{ album.title|e }}
+            {% if album.year %}<span class="text-muted">({{ album.year|e }})</span>{% endif %}
+        </h2>
         <p class="lead">{{ album.shortDescription|e }}</p>
         {% if full %}
             <audio preload></audio>
@@ -20,8 +32,7 @@
 
             {{ album.description|raw }}
         {% else %}
-            <p><a class="btn btn-primary" href="{{ path('bilet33_site_album', {'id': album.id, 'slug': album.slug}) }}" role="button">Подробнее &raquo;</a></p>
+            <p><a class="btn btn-primary" href="{{ albumUrl }}" role="button">Подробнее &raquo;</a></p>
         {% endif %}
     </div>
 </div>
-<hr class="featurette-divider">

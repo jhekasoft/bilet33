@@ -3,11 +3,12 @@
 namespace Bilet33\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Album
  *
- * @ORM\Table()
+ * @ORM\Table(name="album")
  * @ORM\Entity(repositoryClass="Bilet33\SiteBundle\Entity\AlbumRepository")
  */
 class Album

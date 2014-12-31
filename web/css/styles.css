@@ -70,3 +70,9 @@ ol.audio-list li.playing:before { content: '▶'; width: 14px; height: 14px; pad
 .album-list-item {
     cursor: pointer;
 }
+
+/* Header
+----------------------------- */
+.header {
+    text-align: center;
+}

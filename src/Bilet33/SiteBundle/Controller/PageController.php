@@ -11,4 +11,9 @@ class PageController extends Controller
     {
         return $this->render('Bilet33SiteBundle:Page:about.html.twig');
     }
+
+    public function videoAction()
+    {
+        return $this->render('Bilet33SiteBundle:Page:video.html.twig');
+    }
 }

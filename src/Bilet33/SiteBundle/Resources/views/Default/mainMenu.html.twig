@@ -1,5 +1,5 @@
 <!-- Fixed navbar -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top navbar-bilet33">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -18,22 +18,13 @@
                         {% for album in albums %}
                             <li><a href="{{ path('bilet33_site_album', {'id': album.id, 'slug': album.slug}) }}">{{ album.title|e }} ({{ album.year|e }})</a></li>
                         {% endfor %}
-
-                        <li class="divider"></li>
-                        <!--<li class="dropdown-header">Nav header</li>-->
-                        <li><a href="#">Другое</a></li>
+                        <li><a href="{{ path('bilet33_site_album_other') }}">Другое</a></li>
 
                         <li class="divider"></li>
                         <li><a href="{{ path('bilet33_site_albums') }}">Все</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Клипы <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Новый год</a></li>
-                        <li><a href="#">О зиме</a></li>
-                    </ul>
-                </li>
+                <li><a href="{{ path('bilet33_site_video') }}">Клипы</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ path('bilet33_site_about') }}">О проекте</a></li>
