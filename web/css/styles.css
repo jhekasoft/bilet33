@@ -2,6 +2,17 @@ body {
   padding-top: 70px;
 }
 
+.pseudo-link,
+.pseudo-link:focus {
+    text-decoration: none;
+    border-bottom: 1px dashed #337ab7;
+}
+
+.pseudo-link:hover {
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+}
+
 /* Featurettes
 ------------------------- */
 
@@ -60,15 +71,65 @@ body {
     border-radius: 0;
 }
 
-ol.audio-list { padding: 0px; margin: 0px; list-style: decimal-leading-zero inside; color: #ccc; width: 460px; border-top: 1px solid #ccc; margin-bottom: 40px; }
-ol.audio-list li { position: relative; margin: 0px; padding: 9px 2px 10px; border-bottom: 1px solid #ccc; cursor: pointer; }
-ol.audio-list li a { display: block; text-indent: -3.3ex; padding: 0px 0px 0px 20px; }
-ol.audio-list li.playing { color: #aaa; text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3); }
-ol.audio-list li.playing a { color: #000; }
-ol.audio-list li.playing:before { content: '▶'; width: 14px; height: 14px; padding: 3px; line-height: 14px; margin: 0px; position: absolute; left: -24px; top: 9px; color: #000; font-size: 13px; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); }
+ol.audio-list {
+    padding: 0px;
+    margin: 0px;
+    list-style: decimal-leading-zero inside;
+    color: #ccc;
+    width: 460px;
+    border-top: 1px solid #ccc;
+    margin-bottom: 40px;
+}
+
+ol.audio-list li {
+    position: relative;
+    margin: 0px;
+    padding: 9px 2px 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+ol.audio-list li a {
+    display: inline-block;
+}
+ol.audio-list li.playing {
+    color: #aaa;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+    background-color: #F8F8F8;
+}
+
+ol.audio-list li.playing a {
+
+}
+
+ol.audio-list li.playing:before,
+ol.audio-list li:hover:before{
+    content: '▶';
+    width: 14px;
+    height: 14px;
+    padding: 3px;
+    line-height: 14px;
+    margin: 0px;
+    position: absolute;
+    left: -24px;
+    top: 9px;
+    color: #ccc;
+    font-size: 13px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+ol.audio-list li.playing:before {
+    color: #000;
+}
 
 .album-list-item {
     cursor: pointer;
+}
+
+.audio-lyrics {
+    color: #000;
+    margin-left: 24px;
+    display: none;
 }
 
 /* Header

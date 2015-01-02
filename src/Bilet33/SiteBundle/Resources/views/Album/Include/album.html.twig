@@ -27,7 +27,16 @@
                 <audio preload></audio>
                 <ol class="audio-list">
                     {% for audio in album.audios %}
-                        <li><a href="#" data-src="{{ asset(audio.file) }}">{{ audio.title|e }}</a></li>
+                        <li>
+                            <a href="#" data-src="{{ asset(audio.file) }}" class="{% if audio.lyrics %}audio-lyrics-link pseudo-link{% else %}audio-lyrics-empty{% endif %}">
+                                {{ audio.title|e }}
+                            </a>
+                            {% if audio.lyrics %}
+                                <div class="audio-lyrics">
+                                    {{ audio.lyrics|raw }}
+                                </div>
+                            {% endif %}
+                        </li>
                     {% endfor %}
                 </ol>
             {% endif %}
