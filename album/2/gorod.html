@@ -1,0 +1,8 @@
+---
+albumId: 2
+title: site.album[page.albumId].title
+---
+
+{% assign album = site.albums[page.albumId] %}
+{% assign full = true %}
+{% include albums/album.html %}

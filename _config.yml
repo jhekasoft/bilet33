@@ -1,0 +1,126 @@
+# Site settings
+title: Билет 33
+email: jhekasoft@gmail.com
+description: Сайт проекта Билет 33
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://bilet33.com" # the base hostname & protocol for your site
+twitter_username: jhekasoft
+github_username:  jhekasoft
+asset_version: 1
+
+albums:
+  2:
+    id: 2
+    slug: gorod
+    title: Город
+    year: 2015
+    shortDescription: Второй альбом. О городе. Неважно каком. Для каждого города можно примерять эти песни. Альбом создавался на протяжении 2014-го года. И лишь 1-го января 2015-го смог реализоваться.
+    description: >
+      <p>Альбом вышел 1 января 2015 года.</p>
+      <div class="alert alert-info" role="alert"><p>Скачать: <strong><a href="https://yadi.sk/d/k3K_7Q4Vdjjys">Ogg Vorbis</a></strong>, <strong><a href="https://yadi.sk/d/cIHBW6ZBdjf4g">MP3</a></strong>, <strong><a href="https://yadi.sk/d/xp-Kt0AFdjgLT">Flac</a></strong>.</p><p>Слушать: <strong><a href="https://vk.com/audios-51837131?album_id=54935031">ВКонтакте</a></strong>, <strong><a href="https://soundcloud.com/jhekasoft/sets/gorod">SoundCloud</a></strong>, <strong><a href="https://bilet33.kroogi.com/ru/content/3119253-Gorod.html">kroogi</a></strong>, <strong><a href="https://myspace.com/jhekasoft/music/album/-33-19511861">myspace</a></strong>.</div>
+    cover: /assets/music/gorod/mp3/cover.jpg
+    backCover: /assets/music/gorod/mp3/cover2.jpg
+    audios:
+      -
+        file: /assets/music/gorod/mp3/01.mp3
+        title: Без сна
+        lyrics: |
+          Без сна...
+
+          Этой ночью будет так светло.
+          Этой ночью будет смешно.
+          Ты не будешь сегодня спать.
+          Во дворе своём будешь гулять.
+
+          Кто сказал, что на улице скучно
+          Ночью? Что там темно. Бред!
+          Ты устоишь веселье немедля.
+          И одному тебе будет смешно.
+
+          Без сна...
+
+          Твой двор — это больша песочница.
+          Он как парк атракционов.
+          Там качели, там многоэтаэжка.
+          На крыше как на ладони весь город.
+
+          Посмотри вперёд. Огни видишь?
+          Тебя от этого прёт. И ты знаешь
+          За холмом море и песок.
+          На крайняк туда. Двор зовёт...
+
+          Видишь — небо...
+          Видишь — звёзды...
+          Всё с тобою
+          И всё просто...
+  1:
+    id: 1
+    slug: o-raznom
+    title: О разном
+    year: 2013
+    shortDescription: Первый альбом проекта Билет 33. В нём собраны композиции на различную тематику. Тем не менее удалось объединить их в цельное альбомище.
+    description: >
+      <p>Альбом вышел 31 марта 2013 года.</p><div class="alert alert-info" role="alert"><p>Скачать: <strong><a href="http://yadi.sk/d/gkUU_u5u3gmsS">Ogg Vorbis</a></strong>, <strong><a href="http://yadi.sk/d/K0XdOklz3gmuc">MP3</a></strong>, <strong><a href="http://yadi.sk/d/QGqiDEtf3gmlo">Flac</a></strong>.</p><p>SoundCloud: <a href="https://soundcloud.com/jhekasoft/sets/bilet33_o_raznom">https://soundcloud.com/jhekasoft/sets/bilet33_o_raznom</a></p><p>ВКонтакте: <a href="https://vk.com/bilet33">https://vk.com/bilet33</a></p></div>
+    cover: /assets/music/o_raznom/mp3/front.jpg
+    audios:
+      -
+        file: /assets/music/o_raznom/mp3/01.mp3
+        title: fdfdf
+        lyrics: ddf
+      -
+        file: /assets/music/o_raznom/mp3/02.mp3
+        title: fdfdf
+        lyrics: ddf
+
+
+# t:
+#   en:
+#     about: About
+#     other: Other
+#     discussion: Discussion
+#     toUp: Up
+#     insteadmanSubtitle: Play text adventures for INSTEAD!
+#     installInsteadman: Install InsteadMan
+#     windowsDownloadText: Presented by <strong>exe</strong>-installation file. Just install and play.
+#     windowsDownloadText2: Also available <a href="https://github.com/jhekasoft/insteadman/releases/download/v2.0.5/InsteadMan-2.0.5-Windows.zip">ZIP archive</a> (run <strong>insteadman.exe</strong>).
+#     macosDownloadText: Presented by <strong>dmg</strong> image. Open and drag it to the <strong>Applications</strong> folder.
+#     linuxDownloadText: Presented by archive with binaries. Please select proper archive for your OS. Then run <strong>./insteadman</strong>.<br>You should have installed <strong>INSTEAD</strong>.
+#     download: Download
+#     result: Result
+#     resultText: You are able to install and play games easy!
+#     siteSupport: Site support
+#   ru:
+#     about: О проекте
+#     other: Другое
+#     discussion: Обсуждение
+#     toUp: Вверх
+#     insteadmanSubtitle: Играйте в текстовые приключения для INSTEAD!
+#     installInsteadman: Установите InsteadMan
+#     windowsDownloadText: В виде <strong>exe</strong>-установщика. Просто установите и запускайте.
+#     windowsDownloadText2: Также доступен просто <a href="https://github.com/jhekasoft/insteadman/releases/download/v2.0.5/InsteadMan-2.0.5-Windows.zip">ZIP-архив</a> (запустите <strong>insteadman.exe</strong>).
+#     macosDownloadText: В виде <strong>dmg</strong>-образа. Откройте и перетащите в папку с приложениями.
+#     linuxDownloadText: В виде архива с бинарниками. Выберети архив дя свой версии. Затем запустите <strong>./insteadman</strong>.<br>В системе должен быть установлен <strong>INSTEAD</strong>.
+#     download: Загрузить
+#     result: Итог
+#     resultText: Вы сможете легко устанавливать и запускать игры!
+#     siteSupport: Поддержка сайта
+
+
+# Build settings
+markdown: kramdown
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+      lang: ru
+      l: "" # lang for URL
+
+  -
+    scope:
+      path: en
+    values:
+      lang: en
+      l: /en

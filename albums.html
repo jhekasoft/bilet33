@@ -1,0 +1,10 @@
+---
+title: Альбомы Билет 33
+---
+
+{% for albumRaw in site.albums %}
+    {% assign album = albumRaw[1] %}
+    {% assign full = false %}
+    {% include albums/album.html %}
+    {% if forloop.last == false %}<hr class="featurette-divider">{% endif %}
+{% endfor %}

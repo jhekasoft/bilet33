@@ -1,0 +1,15 @@
+---
+title: О проекте
+id: about
+---
+
+О проекте
+=============
+
+Это проект &laquo;Билет 33&raquo;.
+
+ВКонтакте: <a href="http://vk.com/bilet33"><img src="https://pp.vk.me/c424917/v424917492/42ce/QmMPZSFi_1w.jpg" alt="VK" width="32"/>http://vk.com/bilet33</a>
+
+Email для связи: jhekasoft<script>document.write('@')</script>gmail.com
+
+Сайт автора: <a href="http://jhekasoft.net">http://jhekasoft.net</a>
