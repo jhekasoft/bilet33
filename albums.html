@@ -6,5 +6,9 @@ title: Альбомы Билет 33
     {% assign album = albumRaw[1] %}
     {% assign full = false %}
     {% include albums/album.html %}
-    {% if forloop.last == false %}<hr class="featurette-divider">{% endif %}
+    <hr class="featurette-divider">
 {% endfor %}
+
+{% assign album = site.otherAlbum %}
+{% assign full = false %}
+{% include albums/album.html %}

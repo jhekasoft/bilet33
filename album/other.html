@@ -1,12 +1,11 @@
 ---
-albumId: 1
-title: О разном — Билет 33
-redirect_from: "/album/1"
+title: Другое — Билет 33
 ---
 
-{% assign album = site.albums[page.albumId] %}
+{% assign album = site.otherAlbum %}
 {% assign full = true %}
 {% include albums/album.html %}
+
 
 <p>&nbsp;</p>
 <p><a class="btn btn-primary" href="{{ '/albums' | prepend: site.baseurl }}" role="button">&laquo; Все альбомы</a></p>

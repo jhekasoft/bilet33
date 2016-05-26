@@ -132,6 +132,11 @@ ol.audio-list li.playing:before {
     display: none;
 }
 
+.audio-lyrics-empty, .audio-lyrics-empty:hover {
+    color: #000;
+    text-decoration: none;
+}
+
 /* Header
 ----------------------------- */
 .header {
