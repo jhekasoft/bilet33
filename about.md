@@ -12,4 +12,4 @@ id: about
 
 Email для связи: jhekasoft<script>document.write('@')</script>gmail.com
 
-Сайт автора: <a href="http://jhekasoft.net">http://jhekasoft.net</a>
+Разработка: <a href="http://1000.tech" target="_blank">1000.tech</a>

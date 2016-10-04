@@ -1,5 +1,5 @@
 <!-- Fixed navbar -->
-<nav class="navbar navbar-default navbar-fixed-top navbar-bilet33">
+<nav class="navbar navbar-default navbar-fixed-top navbar-bilet33 {% if page.isMainPage %} navbar-main {% endif %}">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -8,12 +8,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ '/' | prepend: site.baseurl }}">Билет 33</a>
+            <a class="navbar-brand may-white" href="{{ '/' | prepend: site.baseurl }}">Билет 33</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="{{ path('bilet33_site_albums') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Альбомы <span class="caret"></span></a>
+                    <a href="{{ path('bilet33_site_albums') }}" class="dropdown-toggle may-white" data-toggle="dropdown" role="button" aria-expanded="false">Альбомы <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         {% for albumRaw in site.albums %}
                             {% assign album = albumRaw[1] %}
@@ -26,7 +26,7 @@
                         <li><a href="{{ '/albums' | prepend: site.baseurl }}">Все</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ '/video' | prepend: page.l | prepend: site.baseurl }}">Клипы</a></li>
+                <li><a href="{{ '/video' | prepend: page.l | prepend: site.baseurl }}" class="may-white">Клипы</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ '/about' | prepend: page.l | prepend: site.baseurl }}">О проекте</a></li>

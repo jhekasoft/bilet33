@@ -1,4 +1,4 @@
-body {
+.page-container {
   padding-top: 70px;
 }
 
@@ -141,4 +141,85 @@ ol.audio-list li.playing:before {
 ----------------------------- */
 .header {
     text-align: center;
+}
+
+.navbar-default {
+    background-color: white;
+    border-color: rgba(34, 34, 34, 0.05);
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.bg {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+93,ffffff+100&0+93,1+100 */
+    background: url("../img/bg13.jpg"); /* Fallback */
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 93%, rgba(255,255,255,1) 100%), url("../img/bg13.jpg"); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 93%,rgba(255,255,255,1) 100%), url("../img/bg13.jpg"); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 93%,rgba(255,255,255,1) 100%), url("../img/bg13.jpg"); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    height: 700px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.4;
+}
+
+.btn-transparent {
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 300px;
+}
+
+.btn-transparent:hover,
+.btn-transparent:focus,
+.btn-transparent:active,
+.btn-transparent.active {
+    background-color: #305d99;
+    color: white;
+    border: 1px solid white;
+}
+
+.audiojs {
+    width: 36px;
+}
+
+@media (min-width: 768px) {
+    .navbar-default.affix-top {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .navbar-main.navbar-default.affix-top .navbar-nav>li>a.may-white,
+    .navbar-main.navbar-default.affix-top .navbar-brand.may-white {
+        color: white;
+    }
+
+    .navbar-default.affix {
+        background-color: white;
+        border-color: rgba(34, 34, 34, 0.1);
+        opacity: 0.98;
+    }
+
+    .bg {
+        opacity: 1;
+    }
+
+    .audiojs {
+        width: 460px;
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    .btn-transparent {
+        color: white;
+        border: 1px solid white;
+    }
+
+    .jumbotron-main {
+        margin-top: 200px;
+    }
 }

@@ -14,7 +14,7 @@
                  src="{{ site.baseurl }}{% if album.cover %}{{ album.cover }}{% else %}{{ '/assets/img/default_cover.jpg' }}{% endif %}"
                  alt="{{ album.title }}">
         {% endif %}
-        {% if full and album.backCover %}
+        {% if full and forMainPage != true and album.backCover %}
             <p>&nbsp;</p>
             <img class="featurette-image img-responsive" src="{{ album.backCover | prepend: site.baseurl }}" alt="{{ album.title }}">
         {% endif %}
@@ -27,7 +27,7 @@
         {% if full %}
             {% if album.audios %}
                 <audio preload></audio>
-                <ol class="audio-list">
+                <ol class="audio-list {% if forMainPage %}hidden{%endif%}">
                     {% for audio in album.audios %}
                         <li>
                             <a href="#" data-src="{{ audio.file | prepend: site.baseurl }}" class="{% if audio.lyrics %}audio-lyrics-link pseudo-link{% else %}audio-lyrics-empty{% endif %}">
@@ -43,7 +43,12 @@
                 </ol>
             {% endif %}
 
-            {{ album.description|raw }}
+            {% if forMainPage %}
+                <p>&nbsp;</p>
+                <p><a class="btn btn-transparent" href="{{ albumLink }}" role="button">Подробнее &raquo;</a></p>
+            {% else %}
+                {{ album.description|raw }}
+            {% endif %}
         {% else %}
             <p><a class="btn btn-primary" href="{{ albumLink }}" role="button">Подробнее &raquo;</a></p>
         {% endif %}
