@@ -151,6 +151,10 @@ ol.audio-list li.playing:before {
     transition: all 0.35s;
 }
 
+.dropdown-menu>li>a, .navbar-default .navbar-nav>li>a {
+    text-transform: uppercase;
+}
+
 .bg-container {
     height: 600px;
     position: absolute;
@@ -170,6 +174,7 @@ ol.audio-list li.playing:before {
     /*background-repeat: no-repeat;*/
     opacity: 0.4;
     height: 798px;
+    background-size: cover;
 }
 
 .btn-transparent {
