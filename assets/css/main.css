@@ -143,6 +143,10 @@ ol.audio-list li.playing:before {
     text-align: center;
 }
 
+body {
+    font-family: "Roboto", sans-serif;
+}
+
 .navbar-default {
     background-color: white;
     border-color: rgba(34, 34, 34, 0.05);
@@ -153,6 +157,10 @@ ol.audio-list li.playing:before {
 
 .dropdown-menu>li>a, .navbar-default .navbar-nav>li>a {
     text-transform: uppercase;
+}
+
+.navbar a {
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .bg-container {
