@@ -67,8 +67,12 @@
 
     // Parallax
     function parallaxScroll(){
-        var scrolled = $(window).scrollTop();
-        $('.bg').css({transform: 'translateY('+(scrolled*.3)+'px)'});
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+        if (width > 768) {
+            var scrolled = $(window).scrollTop();
+            $('.bg').css({transform: 'translateY('+(scrolled*.3)+'px)'});
+        }
     }
 </script>
 

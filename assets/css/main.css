@@ -137,14 +137,26 @@ ol.audio-list li.playing:before {
     text-decoration: none;
 }
 
-/* Header
+/* Footer
 ----------------------------- */
-.header {
-    text-align: center;
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
 }
-
 body {
     font-family: "Roboto", sans-serif;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 80px;
+    text-align: center;
 }
 
 .navbar-default {
