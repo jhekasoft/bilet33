@@ -1,7 +1,11 @@
 # Site settings
-title: Билет 33
+title:
+  ru: Билет 33
+  en: Ticket 33
 email: jhekasoft@gmail.com
-description: Сайт проекта Билет 33
+description:
+  ru: Сайт проекта Билет 33
+  en: The site of "Ticket 33" project
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bilet33.com" # the base hostname & protocol for your site
 twitter_username: jhekasoft
@@ -11,13 +15,23 @@ asset_version: 2
 albums:
   2:
     id: 2
-    slug: gorod
-    title: Город
+    slug:
+      ru: gorod
+      en: thecity
+    title:
+      ru: Город
+      en: The City
     year: 2015
-    shortDescription: Второй альбом. О городе. Неважно каком. Для каждого города можно примерять эти песни. Альбом создавался на протяжении 2014-го года. И лишь 1-го января 2015-го смог реализоваться.
-    description: >
-      <p>Альбом вышел 1 января 2015 года.</p>
-      <div class="alert alert-info" role="alert"><p>Скачать: <strong><a href="https://yadi.sk/d/k3K_7Q4Vdjjys">Ogg Vorbis</a></strong>, <strong><a href="https://yadi.sk/d/cIHBW6ZBdjf4g">MP3</a></strong>, <strong><a href="https://yadi.sk/d/xp-Kt0AFdjgLT">Flac</a></strong>.</p><p>Слушать: <strong><a href="https://vk.com/audios-51837131?album_id=54935031">ВКонтакте</a></strong>, <strong><a href="https://soundcloud.com/jhekasoft/sets/gorod">SoundCloud</a></strong>, <strong><a href="https://bilet33.kroogi.com/ru/content/3119253-Gorod.html">kroogi</a></strong>, <strong><a href="https://myspace.com/jhekasoft/music/album/-33-19511861">myspace</a></strong>.</div>
+    shortDescription:
+      ru: Второй альбом. О городе. Неважно каком. Для каждого города можно примерять эти песни. Альбом создавался на протяжении 2014-го года. И лишь 1-го января 2015-го смог реализоваться.
+      en: Second album. About city. No matters what city. These songs fit each city. The album was creating during the 2014 year. And it was released in 1 January 2015.
+    description:
+      ru: >
+        <p>Альбом вышел 1 января 2015 года.</p>
+        <div class="alert alert-info" role="alert"><p>Скачать: <strong><a href="https://yadi.sk/d/k3K_7Q4Vdjjys">Ogg Vorbis</a></strong>, <strong><a href="https://yadi.sk/d/cIHBW6ZBdjf4g">MP3</a></strong>, <strong><a href="https://yadi.sk/d/xp-Kt0AFdjgLT">Flac</a></strong>.</p><p>Слушать: <strong><a href="https://vk.com/audios-51837131?album_id=54935031">ВКонтакте</a></strong>, <strong><a href="https://soundcloud.com/jhekasoft/sets/gorod">SoundCloud</a></strong>, <strong><a href="https://bilet33.kroogi.com/ru/content/3119253-Gorod.html">kroogi</a></strong>, <strong><a href="https://myspace.com/jhekasoft/music/album/-33-19511861">myspace</a></strong>.</div>
+      en: >
+        <p>The album was released in 1 January 2015.</p>
+        <div class="alert alert-info" role="alert"><p>Download: <strong><a href="https://yadi.sk/d/k3K_7Q4Vdjjys">Ogg Vorbis</a></strong>, <strong><a href="https://yadi.sk/d/cIHBW6ZBdjf4g">MP3</a></strong>, <strong><a href="https://yadi.sk/d/xp-Kt0AFdjgLT">Flac</a></strong>.</p><p>To listen: <strong><a href="https://vk.com/audios-51837131?album_id=54935031">VK</a></strong>, <strong><a href="https://soundcloud.com/jhekasoft/sets/gorod">SoundCloud</a></strong>, <strong><a href="https://bilet33.kroogi.com/ru/content/3119253-Gorod.html">kroogi</a></strong>, <strong><a href="https://myspace.com/jhekasoft/music/album/-33-19511861">myspace</a></strong>.</div>
     cover: /assets/music/gorod/mp3/cover.jpg
     backCover: /assets/music/gorod/mp3/cover2.jpg
     audios:
@@ -505,12 +519,21 @@ albums:
           Вот я пляж вижу...
   1:
     id: 1
-    slug: o-raznom
-    title: О разном
+    slug:
+      ru: o-raznom
+      en: various
+    title:
+      ru: О разном
+      en: About various things
     year: 2013
-    shortDescription: Первый альбом проекта Билет 33. В нём собраны композиции на различную тематику. Тем не менее удалось объединить их в цельное альбомище.
-    description: >
-      <p>Альбом вышел 31 марта 2013 года.</p><div class="alert alert-info" role="alert"><p>Скачать: <strong><a href="http://yadi.sk/d/gkUU_u5u3gmsS">Ogg Vorbis</a></strong>, <strong><a href="http://yadi.sk/d/K0XdOklz3gmuc">MP3</a></strong>, <strong><a href="http://yadi.sk/d/QGqiDEtf3gmlo">Flac</a></strong>.</p><p>SoundCloud: <a href="https://soundcloud.com/jhekasoft/sets/bilet33_o_raznom">https://soundcloud.com/jhekasoft/sets/bilet33_o_raznom</a></p><p>ВКонтакте: <a href="https://vk.com/bilet33">https://vk.com/bilet33</a></p></div>
+    shortDescription:
+      ru: Первый альбом проекта Билет 33. В нём собраны композиции на различную тематику. Тем не менее удалось объединить их в цельное альбомище.
+      en: The first album of "Ticket 33" project. There are different songs in this album.
+    description:
+      ru: >
+        <p>Альбом вышел 31 марта 2013 года.</p><div class="alert alert-info" role="alert"><p>Скачать: <strong><a href="http://yadi.sk/d/gkUU_u5u3gmsS">Ogg Vorbis</a></strong>, <strong><a href="http://yadi.sk/d/K0XdOklz3gmuc">MP3</a></strong>, <strong><a href="http://yadi.sk/d/QGqiDEtf3gmlo">Flac</a></strong>.</p><p>SoundCloud: <a href="https://soundcloud.com/jhekasoft/sets/bilet33_o_raznom">https://soundcloud.com/jhekasoft/sets/bilet33_o_raznom</a></p><p>ВКонтакте: <a href="https://vk.com/bilet33">https://vk.com/bilet33</a></p></div>
+      en: >
+        <p>The album was released in 31 March 2015.</p><div class="alert alert-info" role="alert"><p>Download: <strong><a href="http://yadi.sk/d/gkUU_u5u3gmsS">Ogg Vorbis</a></strong>, <strong><a href="http://yadi.sk/d/K0XdOklz3gmuc">MP3</a></strong>, <strong><a href="http://yadi.sk/d/QGqiDEtf3gmlo">Flac</a></strong>.</p><p>SoundCloud: <a href="https://soundcloud.com/jhekasoft/sets/bilet33_o_raznom">https://soundcloud.com/jhekasoft/sets/bilet33_o_raznom</a></p><p>VK: <a href="https://vk.com/bilet33">https://vk.com/bilet33</a></p></div>
     cover: /assets/music/o_raznom/mp3/front.jpg
     audios:
       -
@@ -867,8 +890,12 @@ albums:
         title: Бессонница (импровизация)
 
 otherAlbum:
-  title: Другое
-  shortDescription: Другие записи
+  title:
+    ru: Другое
+    en: Other
+  shortDescription:
+    ru: Другие записи
+    en: Other records
   audios:
     -
       file: /assets/music/about_pottering.mp3
@@ -893,6 +920,25 @@ otherAlbum:
         UTF-8 рулит!
         (8 раз)
 
+t:
+  ru:
+    menu: Меню
+    ticket33: Билет 33
+    albums: Альбомы
+    all: Все
+    clips: Клипы
+    about: О проекте
+    development: разработка
+    more: Подробнее
+  en:
+    menu: Menu
+    ticket33: Ticket 33
+    albums: Albums
+    all: All
+    clips: Clips
+    about: About
+    development: development
+    more: More
 
 # Build settings
 markdown: kramdown

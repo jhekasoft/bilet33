@@ -6,7 +6,7 @@
 <p>&nbsp;</p>
 
 <div class="jumbotron jumbotron-main">
-    <h1>Билет 33</h1>
+    <h1>{{ site.t[page.lang].ticket33 }}</h1>
     <p>
 Дождь на Драме. Можно укрыться в колоннах.<br>
 Течёт по брусчатке, лица прохожих знакомы. <br>
@@ -26,6 +26,6 @@
 Дождь на Драме... А кто-то о мире мечтает...
     </p>
     <p>
-        <a class="btn btn-lg btn-primary" href="{{ '/about' | prepend: page.l | prepend: site.baseurl }}" role="button">Подробнее &raquo;</a>
+        <a class="btn btn-lg btn-primary" href="{{ '/about' | prepend: page.l | prepend: site.baseurl }}" role="button">{{ site.t[page.lang].more }} &raquo;</a>
     </p>
 </div>

@@ -1,0 +1,14 @@
+---
+title: Аlbums of the "Ticket 33"
+---
+
+{% for albumRaw in site.albums %}
+    {% assign album = albumRaw[1] %}
+    {% assign full = false %}
+    {% include albums/album.html %}
+    <hr class="featurette-divider">
+{% endfor %}
+
+{% assign album = site.otherAlbum %}
+{% assign full = false %}
+{% include albums/album.html %}

@@ -3,34 +3,35 @@
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Меню</span>
+                <span class="sr-only">{{ site.t[page.lang].menu }}</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand may-white" href="{{ '/' | prepend: site.baseurl }}">Билет 33</a>
+            <a class="navbar-brand may-white" href="{{ '/' | prepend: page.l | prepend: site.baseurl }}">{{ site.t[page.lang].ticket33 }}</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="{{ path('bilet33_site_albums') }}" class="dropdown-toggle may-white" data-toggle="dropdown" role="button" aria-expanded="false">Альбомы <span class="caret"></span></a>
+                    <a href="{{ path('bilet33_site_albums') }}" class="dropdown-toggle may-white" data-toggle="dropdown" role="button" aria-expanded="false">{{ site.t[page.lang].albums }} <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         {% for albumRaw in site.albums %}
                             {% assign album = albumRaw[1] %}
-                            {% capture albumLink %}/album/{{ album.id }}/{{ album.slug }}{% endcapture %}
-                            <li><a href="{{ albumLink | prepend: site.baseurl }}">{{ album.title }} ({{ album.year }})</a></li>
+                            {% capture albumLink %}/album/{{ album.id }}/{{ album.slug[page.lang] }}{% endcapture %}
+                            <li><a href="{{ albumLink | prepend: page.l | prepend: site.baseurl }}">{{ album.title[page.lang] }} ({{ album.year }})</a></li>
                         {% endfor %}
-                        <li><a href="{{ '/album/other' | prepend: site.baseurl }}">Другое</a></li>
+                        <li><a href="{{ '/album/other' |  prepend: page.l | prepend: site.baseurl }}">{{ site.otherAlbum.title[page.lang] }}</a></li>
 
                         <li class="divider"></li>
-                        <li><a href="{{ '/albums' | prepend: site.baseurl }}">Все</a></li>
+                        <li><a href="{{ '/albums' |  prepend: page.l | prepend: site.baseurl }}">{{ site.t[page.lang].all }}</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ '/video' | prepend: page.l | prepend: site.baseurl }}" class="may-white">Клипы</a></li>
+                <li><a href="{{ '/video' | prepend: page.l | prepend: site.baseurl }}" class="may-white">{{ site.t[page.lang].clips }}</a></li>
+                <li><a href="{{ '/about' | prepend: page.l | prepend: site.baseurl }}" class="may-white">{{ site.t[page.lang].about }}</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ '/about' | prepend: page.l | prepend: site.baseurl }}">О проекте</a></li>
+                <li class="{%if page.lang == 'ru' %}active{% endif %}"><a href="{{ '/' | prepend: site.baseurl }}">RU</a></li>
+                <li class="{%if page.lang == 'en' %}active{% endif %}"><a href="{{ '/en' | prepend: site.baseurl }}">EN</a></li>
             </ul>
-        </div><!--/.nav-collapse -->
     </div>
 </nav>

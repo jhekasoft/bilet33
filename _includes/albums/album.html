@@ -1,5 +1,5 @@
 {% if album.id %}
-    {% capture albumLink %}{{ site.baseurl }}/album/{{ album.id }}/{{ album.slug }}{% endcapture %}
+    {% capture albumLink %}{{ site.baseurl }}/album/{{ album.id }}/{{ album.slug[page.lang] }}{% endcapture %}
 {% else %}
     {% capture albumLink %}{{ site.baseurl }}/album/other{% endcapture %}
 {% endif %}
@@ -8,22 +8,22 @@
     {% if full == false %}onclick="window.location.href='{{ albumLink }}'" {% endif %}>
     <div class="col-md-5">
         {% if album.coverFile %}
-            <img class="featurette-image img-responsive" src="" alt="{{ album.title }}">
+            <img class="featurette-image img-responsive" src="" alt="{{ album.title[page.lang] }}">
         {% else %}
             <img class="featurette-image img-responsive"
                  src="{{ site.baseurl }}{% if album.cover %}{{ album.cover }}{% else %}{{ '/assets/img/default_cover.jpg' }}{% endif %}"
-                 alt="{{ album.title }}">
+                 alt="{{ album.title[page.lang] }}">
         {% endif %}
         {% if full and forMainPage != true and album.backCover %}
             <p>&nbsp;</p>
-            <img class="featurette-image img-responsive" src="{{ album.backCover | prepend: site.baseurl }}" alt="{{ album.title }}">
+            <img class="featurette-image img-responsive" src="{{ album.backCover | prepend: site.baseurl }}" alt="{{ album.title[page.lang] }}">
         {% endif %}
     </div>
     <div class="col-md-7">
-        <h2 class="featurette-heading">{{ album.title }}
+        <h2 class="featurette-heading">{{ album.title[page.lang] }}
             {% if album.year %}<span class="text-muted">({{ album.year }})</span>{% endif %}
         </h2>
-        <p class="lead">{{ album.shortDescription }}</p>
+        <p class="lead">{{ album.shortDescription[page.lang] }}</p>
         {% if full %}
             {% if album.audios %}
                 <audio preload></audio>
@@ -45,12 +45,12 @@
 
             {% if forMainPage %}
                 <p>&nbsp;</p>
-                <p><a class="btn btn-transparent" href="{{ albumLink }}" role="button">Подробнее &raquo;</a></p>
+                <p><a class="btn btn-transparent" href="{{ albumLink | prepend: page.l | prepend: site.baseurl }}" role="button">{{ site.t[page.lang].more }} &raquo;</a></p>
             {% else %}
-                {{ album.description|raw }}
+                {{ album.description[page.lang]|raw }}
             {% endif %}
         {% else %}
-            <p><a class="btn btn-primary" href="{{ albumLink }}" role="button">Подробнее &raquo;</a></p>
+            <p><a class="btn btn-primary" href="{{ albumLink | prepend: page.l | prepend: site.baseurl }}" role="button">{{ site.t[page.lang].more }} &raquo;</a></p>
         {% endif %}
     </div>
 </div>

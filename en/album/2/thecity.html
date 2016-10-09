@@ -1,0 +1,13 @@
+---
+albumId: 2
+title: The City — Ticket 33
+redirect_from: "/album/2"
+---
+
+{% assign album = site.albums[page.albumId] %}
+{% assign full = true %}
+{% include albums/album.html %}
+
+
+<p>&nbsp;</p>
+<p><a class="btn btn-primary" href="{{ '/albums' | prepend: page.l | prepend: site.baseurl }}" role="button">&laquo; All the albums</a></p>
