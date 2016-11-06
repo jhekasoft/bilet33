@@ -225,6 +225,7 @@ body {
     .navbar-main.navbar-default.affix-top .navbar-nav>li>a.may-white,
     .navbar-main.navbar-default.affix-top .navbar-brand.may-white {
         color: white;
+        text-shadow: 2px 2px 4px #777;
     }
 
     .navbar-default.affix {
