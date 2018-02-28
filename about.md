@@ -8,8 +8,13 @@ id: about
 
 Это проект &laquo;Билет 33&raquo;.
 
-ВКонтакте: <a href="http://vk.com/bilet33"><img src="https://pp.vk.me/c424917/v424917492/42ce/QmMPZSFi_1w.jpg" alt="VK" width="32"/>http://vk.com/bilet33</a>
+
+Facebook: <a href="https://www.facebook.com/groups/bilet33/">http://vk.com/bilet33</a>
+
+ВКонтакте: <a href="http://vk.com/bilet33">http://vk.com/bilet33</a>
+
+Google Play Music: <a href="https://play.google.com/store/music/artist/%D0%91%D0%B8%D0%BB%D0%B5%D1%82_33?id=Aiwkeejdkokrlrsdvwocwnkr4ju">https://play.google.com/store/music/artist/Билет_33?id=Aiwkeejdkokrlrsdvwocwnkr4ju</a>
+
+iTunes: <a href="http://vk.com/bilet33">https://itunes.apple.com/us/artist/билет-33/1130917092</a>
 
 Email для связи: jhekasoft<script>document.write('@')</script>gmail.com
-
-Разработка: <a href="http://1000.tech" target="_blank">http://1000.tech</a>
