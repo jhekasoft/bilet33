@@ -1,7 +1,7 @@
 {% if album.id %}
-    {% capture albumLink %}{{ site.baseurl }}/album/{{ album.id }}/{{ album.slug[page.lang] }}{% endcapture %}
+    {% capture albumLink %}/album/{{ album.id }}/{{ album.slug[page.lang] }}{% endcapture %}
 {% else %}
-    {% capture albumLink %}{{ site.baseurl }}/album/other{% endcapture %}
+    {% capture albumLink %}/album/other{% endcapture %}
 {% endif %}
 
 <div class="row featurette album-list-item"
